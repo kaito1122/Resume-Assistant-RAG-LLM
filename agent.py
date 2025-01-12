@@ -8,9 +8,10 @@ import yaml
 import statistics
 from pathlib import Path
 import chromadb
+import os
 
 BASE_URL = "http://199.94.61.113:8000/v1/"
-API_KEY = "tarallo.n@northeastern.edu:OQEgetkQ6LBofgWW4jsC"
+API_KEY = os.get_env("LLAMA")
 
 temp_path = 'project/temp'
 

@@ -2,10 +2,11 @@ import gradio as gr
 from openai import OpenAI
 from agent import Agent
 import chromadb
+import os
 
 # Initialize the OpenAI client and load flights dataset from your script
 BASE_URL = "http://199.94.61.113:8000/v1/"
-API_KEY = "tarallo.n@northeastern.edu:OQEgetkQ6LBofgWW4jsC"
+API_KEY = os.get_env("LLAMA")
 
 client = OpenAI(base_url=BASE_URL, api_key=API_KEY)
 

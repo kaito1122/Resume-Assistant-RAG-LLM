@@ -1,6 +1,7 @@
 from openai import OpenAI
 from datasets import Dataset
 import re
+import os
 
 industries = [
     'software',
@@ -26,7 +27,7 @@ industries = [
 ]
 
 BASE_URL = "http://199.94.61.113:8000/v1/"
-API_KEY = "tarallo.n@northeastern.edu:OQEgetkQ6LBofgWW4jsC"
+API_KEY = os.get_env("LLAMA")
 client = OpenAI(base_url=BASE_URL, api_key=API_KEY)
 
 def generate_system_prompt(industry):
